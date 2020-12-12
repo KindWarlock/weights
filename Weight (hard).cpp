@@ -110,6 +110,6 @@ int main()
         }
         output << endl;
     }
-    out.close();
+    output.close();
     return(0);
 }
