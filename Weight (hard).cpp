@@ -8,6 +8,10 @@ int main()
     int* pleft;                      //чтобы не плодить новые счетчики
     int* pright;
     ofstream output ("output.dat");
+    if (!output.is_open()) {
+        cout << "Could not create a file" << endl;
+        return -4;
+    }
     output << "  m  |   Left   |   Right  " << endl << "---------------------------" << endl; // M лежит на левой чаше
     for (int m = 30; m <= 200; m++) {
         if (m >= 100) output << m << "  | ";
@@ -106,5 +110,6 @@ int main()
         }
         output << endl;
     }
+    out.close();
     return(0);
 }
